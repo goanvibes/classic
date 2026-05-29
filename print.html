@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Prints | Classic Business Centre</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-alt">
+    <header class="navbar">
+        <div class="logo-container">
+            <i class="fas fa-print logo-icon"></i>
+            <span class="logo-text">Classic Business Centre</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home & Catalog</a>
+            <a href="index.html#locations">Locations</a>
+            <a href="print.html" class="btn btn-primary active">Order Print</a>
+        </nav>
+        <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <section class="order-section slide-up">
+        <div class="container form-container">
+            <div class="form-header">
+                <h2>Request a Print Job</h2>
+                <p>Fill out the details below. We will format your request and open WhatsApp so you can send us the job directly with your files.</p>
+            </div>
+            
+            <form id="printOrderForm" class="card">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="branch">Pickup Branch *</label>
+                        <select id="branch" required>
+                            <option value="">Select a branch</option>
+                            <option value="Patto, Panaji">Patto, Panaji</option>
+                            <option value="MG Road, Panaji">MG Road, Panaji</option>
+                            <option value="Mapusa">Mapusa</option>
+                            <option value="Porvorim">Porvorim</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" required>
+                            <option value="">Select a service</option>
+                            <option value="Standard/High-Volume Xerox">Standard/High-Volume Xerox</option>
+                            <option value="AutoCAD/Engineering Plotting">AutoCAD/Engineering Plotting</option>
+                            <option value="Flex/Poster Printing">Flex/Poster Printing</option>
+                            <option value="Spiral/Book Binding">Spiral/Book Binding</option>
+                            <option value="Other">Other (Specify below)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Print Instructions & Details *</label>
+                    <textarea id="details" rows="5" required placeholder="E.g., 50 copies in A4 color, double-sided, spiral bound..."></textarea>
+                </div>
+
+                <div class="form-info-box">
+                    <i class="fas fa-info-circle"></i>
+                    <p>After clicking submit, WhatsApp will open. <strong>Please attach your document files (PDF, DWG, JPG) in the WhatsApp chat.</strong></p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large full-width">
+                    <i class="fab fa-whatsapp"></i> Generate WhatsApp Order
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
